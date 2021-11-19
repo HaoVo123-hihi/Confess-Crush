@@ -10,23 +10,6 @@ $(document).ready(function() {
     }, 600);
 })
 
-function init() {
-    document.getElementById('titleWeb').innerHTML = CONFIG.titleWeb
-    $('#title').text(CONFIG.title)
-    $('#desc').text(CONFIG.desc)
-    $('#yes').text(CONFIG.btnYes)
-    $('#no').text(CONFIG.btnNo)
-
-    var xYes = (0.9 * $(window).width() - $('#yes').width() - $('#no').width()) / 2;
-    var xNo = xYes + $('#yes').width() + 0.1 * $(window).width();
-    var y = 0.75 * $(window).height();
-    $('#yes').css("left", xYes);
-    $('#yes').css("top", y);
-
-    $('#no').css("left", xNo);
-    $('#no').css("top", y);
-}
-
 function firstQuestion() {
     $('.content').hide();
     Swal.fire({
@@ -37,7 +20,5 @@ function firstQuestion() {
         imageHeight: 300,
         background: '#fff url("img/iput-bg.jpg")',
         imageAlt: 'Custom image',
-    }).then(function() {
-        $('.content').show(200);
     })
 }
